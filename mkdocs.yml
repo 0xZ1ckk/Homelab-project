@@ -1,0 +1,40 @@
+site_name: Omar Pasculli – Homelab docs
+site_url: https://your-username.github.io/homelab/
+repo_url: https://github.com/0xZ1ckk/homelab
+
+theme:
+  name: material
+  palette:
+    - scheme: slate          # dark mode
+      primary: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default        # light mode
+      primary: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs        # top-level sections as tabs
+    - navigation.sections
+    - content.code.copy      # copy button on code blocks
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Troubleshooting:
+      - DNS not resolving: troubleshooting/dns-not-resolving.md
+  - Technologies:
+      - ESXi: technologies/esxi.md
+      - Active Directory: technologies/active-directory.md
+  
+
+markdown_extensions:
+  - admonition               # note/warning boxes
+  - pymdownx.details         # collapsible boxes
+  - pymdownx.superfences     # better code blocks
+  - pymdownx.tabbed:
+      alternate_style: true  # tabs inside a page
+  - attr_list
+  - md_in_html
