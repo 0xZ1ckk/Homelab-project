@@ -19,4 +19,4 @@ This site contains public documentation for my homelab, virtualized on a Dell se
 
 ## Troubleshooting writeups
 
-- [dns-not-resolving](troubleshooting/dns-not-resolving.md)
+- [Dns not resolving](troubleshooting/dns-not-resolving.md)
