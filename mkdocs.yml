@@ -1,6 +1,6 @@
 site_name: Omar Pasculli – Homelab docs
 site_url: https://your-username.github.io/homelab/
-repo_url: https://github.com/0xZ1ckk/homelab
+repo_url: https://github.com/0xZ1ckk
 
 theme:
   name: material
