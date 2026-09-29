@@ -19,4 +19,4 @@ This site contains public documentation for my homelab, virtualized on a Dell se
 
 ## Troubleshooting writeups
 
-- [GPO not applying](troubleshooting/gpo-not-applying.md)
+- [dns-not-resolving](troubleshooting/dns-not-resolving.md)
