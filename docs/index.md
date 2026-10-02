@@ -14,6 +14,7 @@ This site contains public documentation for my homelab, virtualized on a Dell se
 
 ## Technologies
 
+- [VPN](technologies/VPN.md)
 - [ESXi](technologies/esxi.md)
 - [Active Directory](technologies/active-directory.md)
 
