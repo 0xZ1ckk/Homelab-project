@@ -26,6 +26,7 @@ nav:
   - Troubleshooting:
       - DNS not resolving: troubleshooting/dns-not-resolving.md
   - Technologies:
+      - VPN: technologies/VPN.md
       - ESXi: technologies/esxi.md
       - Active Directory: technologies/active-directory.md
   
