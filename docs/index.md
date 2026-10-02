@@ -10,7 +10,7 @@ This site contains public documentation for my homelab, virtualized on a Dell se
 
 ## Lab layout
 
-![Network diagram of the homelab](images/NetworkLayout.png)
+![Network diagram of the homelab](images/homelab-full-design.svg)
 
 ## Technologies
 

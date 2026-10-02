@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1560" viewBox="0 0 1700 1560" font-family="Helvetica, Arial, sans-serif">
+<rect width="1700" height="1560" fill="#000"/>
+<text x="850.0" y="34" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="bold">Homelab network design: redundant edge, collapsed core, EVE-NG on ESXi</text>
+<circle cx="770" cy="84" r="20" fill="#ffffff" stroke="#222"/>
+<circle cx="792" cy="70" r="24" fill="#ffffff" stroke="#222"/>
+<circle cx="818" cy="74" r="22" fill="#ffffff" stroke="#222"/>
+<circle cx="836" cy="86" r="16" fill="#ffffff" stroke="#222"/>
+<circle cx="800" cy="90" r="22" fill="#ffffff" stroke="#222"/>
+<rect x="756" y="80" width="92" height="22" fill="#ffffff"/>
+<text x="800" y="98" font-size="14" text-anchor="middle" fill="#000" font-weight="bold">Internet</text>
+<line x1="800" y1="120" x2="800" y2="178" stroke="#ffffff" stroke-width="1.5"/>
+<ellipse cx="800" cy="208" rx="26" ry="12" fill="#2f7fa8"/>
+<rect x="774" y="196" width="52" height="12" fill="#2f7fa8"/>
+<ellipse cx="800" cy="196" rx="26" ry="12" fill="#4fb3e0" stroke="#1b4f6b"/>
+<line x1="800" y1="196" x2="788" y2="196" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="800" y1="196" x2="812" y2="196" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="800" y1="188" x2="800" y2="204" stroke="#1b4f6b" stroke-width="2"/>
+<text x="840" y="196" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Modem/router</text>
+<text x="840" y="212" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">192.168.1.1 | 172.16.1.1</text>
+<line x1="800" y1="216" x2="800" y2="352" stroke="#ffffff" stroke-width="1.5"/>
+<text x="810" y="300" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">cable → vmnic0</text>
+<text x="810" y="316" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">static route 10.0.0.0/16 → 172.16.1.2 (VIP)</text>
+<rect x="60" y="90" width="460" height="190" rx="6" fill="none" stroke="#fff" stroke-width="1.5"/>
+<text x="290" y="82" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">Home network 192.168.1.0/24</text>
+<rect x="162" y="153" width="36" height="26" rx="2" fill="#4fb3e0"/>
+<rect x="166" y="157" width="28" height="18" fill="#8fd3f2"/>
+<polygon points="156,187 204,187 198,180 162,180" fill="#2f7fa8"/>
+<text x="180" y="215" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="bold">Management laptop</text>
+<text x="180" y="231" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="bold">192.168.1.203</text>
+<rect x="372" y="155" width="56" height="38" rx="4" fill="#3fa36b" stroke="#1e5c3a"/>
+<text x="400" y="179" font-size="13" text-anchor="middle" fill="#fff" font-weight="bold">Pi</text>
+<text x="400" y="215" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="bold">Raspberry Pi · VPN</text>
+<text x="400" y="231" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="bold">UDP 500/4500 forwarded</text>
+<line x1="774" y1="200" x2="522" y2="200" stroke="#ffffff" stroke-width="1.5"/>
+<rect x="20" y="330" width="1660" height="1170" fill="none" stroke="#fff" stroke-width="1.5"/>
+<text x="1665" y="322" font-size="15" text-anchor="end" fill="#ffffff" font-weight="bold">Dell server · ESXi</text>
+<rect x="560" y="352" width="960" height="80" rx="6" fill="none" stroke="#4fb3e0" stroke-width="1.5"/>
+<text x="572" y="370" font-size="13" text-anchor="start" fill="#4fb3e0" font-weight="bold">vSwitch0 · physical uplink vmnic0</text>
+<rect x="600" y="382" width="400" height="38" rx="6" fill="none" stroke="#fff" stroke-width="1.5"/>
+<text x="800" y="406" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="normal">Port group LAB-WAN · 172.16.1.0/24</text>
+<rect x="1040" y="382" width="460" height="38" rx="6" fill="none" stroke="#fff" stroke-width="1.5"/>
+<text x="1270" y="406" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="normal">Port group Management · ESXi mgmt + EVE-NG web UI</text>
+<rect x="40" y="465" width="1620" height="640" rx="6" fill="#f5a524" fill-opacity="0.05" stroke="#f5a524" stroke-width="1.5"/>
+<text x="1645" y="488" font-size="14" text-anchor="end" fill="#f5a524" font-weight="bold">EVE-NG VM (all network devices)</text>
+<line x1="1270" y1="420" x2="1270" y2="465" stroke="#ffffff" stroke-width="1.5"/>
+<text x="1280" y="452" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">eth0 / pnet0 → web UI</text>
+<line x1="800" y1="420" x2="800" y2="492" stroke="#ffffff" stroke-width="1.5"/>
+<text x="810" y="452" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">eth1 / pnet1</text>
+<circle cx="786" cy="512" r="11" fill="#ddd"/>
+<circle cx="800" cy="504" r="13" fill="#ddd"/>
+<circle cx="814" cy="512" r="11" fill="#ddd"/>
+<rect x="776" y="510" width="48" height="12" fill="#ddd"/>
+<text x="766" y="514" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold"></text>
+<text x="766" y="530" font-size="12" text-anchor="end" fill="#b8c2c8" font-weight="normal"></text>
+<text x="766" y="506" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">Cloud1 · WAN</text>
+<line x1="786" y1="522" x2="580" y2="586" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="814" y1="522" x2="1020" y2="586" stroke="#ffffff" stroke-width="1.5"/>
+<ellipse cx="560" cy="608" rx="26" ry="12" fill="#2f7fa8"/>
+<rect x="534" y="596" width="52" height="12" fill="#2f7fa8"/>
+<ellipse cx="560" cy="596" rx="26" ry="12" fill="#4fb3e0" stroke="#1b4f6b"/>
+<line x1="560" y1="596" x2="548" y2="596" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="560" y1="596" x2="572" y2="596" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="560" y1="588" x2="560" y2="604" stroke="#1b4f6b" stroke-width="2"/>
+<ellipse cx="1040" cy="608" rx="26" ry="12" fill="#2f7fa8"/>
+<rect x="1014" y="596" width="52" height="12" fill="#2f7fa8"/>
+<ellipse cx="1040" cy="596" rx="26" ry="12" fill="#4fb3e0" stroke="#1b4f6b"/>
+<line x1="1040" y1="596" x2="1028" y2="596" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="1040" y1="596" x2="1052" y2="596" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="1040" y1="588" x2="1040" y2="604" stroke="#1b4f6b" stroke-width="2"/>
+<line x1="590" y1="600" x2="1010" y2="600" stroke="#5fd68a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="800" y="590" font-size="12" text-anchor="middle" fill="#5fd68a" font-weight="bold">VRRP / CARP + state sync</text>
+<text x="800" y="620" font-size="12" text-anchor="middle" fill="#5fd68a" font-weight="normal">VIP 172.16.1.2 (WAN) · VIP 10.0.255.1 (inside)</text>
+<text x="520" y="596" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">Router-1</text>
+<text x="520" y="612" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">172.16.1.11</text>
+<text x="1080" y="596" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Router-2</text>
+<text x="1080" y="612" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">172.16.1.12</text>
+<text x="520" y="630" font-size="12" text-anchor="end" fill="#b8c2c8" font-weight="normal">VyOS / OPNsense · NAT, firewall</text>
+<text x="1080" y="630" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">VyOS / OPNsense · NAT, firewall</text>
+<line x1="560" y1="618" x2="560" y2="744" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="560" y1="618" x2="1040" y2="744" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040" y1="618" x2="560" y2="744" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040" y1="618" x2="1040" y2="744" stroke="#ffffff" stroke-width="1.5"/>
+<text x="1052" y="690" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">transit 10.0.255.0/29</text>
+<rect x="525.0" y="746" width="70" height="28" rx="3" fill="#4fb3e0" stroke="#1b4f6b"/>
+<rect x="531.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="540.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="549.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="558.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="567.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<text x="584.0" y="765" font-size="11" text-anchor="middle" fill="#0b2a3a" font-weight="bold">L3</text>
+<rect x="1005.0" y="746" width="70" height="28" rx="3" fill="#4fb3e0" stroke="#1b4f6b"/>
+<rect x="1011.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="1020.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="1029.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="1038.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<rect x="1047.0" y="755" width="6" height="9" fill="#1b4f6b"/>
+<text x="1064.0" y="765" font-size="11" text-anchor="middle" fill="#0b2a3a" font-weight="bold">L3</text>
+<line x1="596" y1="756" x2="1004" y2="756" stroke="#ffffff" stroke-width="3"/>
+<line x1="596" y1="764" x2="1004" y2="764" stroke="#ffffff" stroke-width="3"/>
+<text x="800" y="746" font-size="12" text-anchor="middle" fill="#b8c2c8" font-weight="normal">port-channel (LACP)</text>
+<text x="514" y="754" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">Core-1</text>
+<text x="514" y="770" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">L3 switch</text>
+<text x="514" y="788" font-size="12" text-anchor="end" fill="#b8c2c8" font-weight="normal">Arista vEOS</text>
+<text x="1086" y="730" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Core-2</text>
+<text x="1086" y="746" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">L3 switch</text>
+<text x="1086" y="788" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Arista vEOS</text>
+<line x1="1076" y1="760" x2="1422" y2="764" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1436" cy="762" r="11" fill="#ddd"/>
+<circle cx="1450" cy="754" r="13" fill="#ddd"/>
+<circle cx="1464" cy="762" r="11" fill="#ddd"/>
+<rect x="1426" y="760" width="48" height="12" fill="#ddd"/>
+<text x="1484" y="764" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Cloud2</text>
+<text x="1484" y="780" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">server trunk</text>
+<text x="1484" y="796" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">VLAN 10 / 30 / 99</text>
+<text x="1484" y="811" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">trunk from both cores</text>
+<line x1="560" y1="774" x2="300" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040" y1="774" x2="300" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<rect x="268.0" y="908" width="64" height="24" rx="3" fill="#4fb3e0" stroke="#1b4f6b"/>
+<rect x="275.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="284.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="293.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="302.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="311.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="320.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<text x="342" y="950" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Access-1</text>
+<text x="342" y="966" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Floor 1 · VLANs 21 / 22 / 23</text>
+<line x1="300" y1="932" x2="300" y2="1012" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="286" cy="1032" r="11" fill="#ddd"/>
+<circle cx="300" cy="1024" r="13" fill="#ddd"/>
+<circle cx="314" cy="1032" r="11" fill="#ddd"/>
+<rect x="276" y="1030" width="48" height="12" fill="#ddd"/>
+<text x="334" y="1034" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Cloud3</text>
+<text x="334" y="1050" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Floor 1 clients</text>
+<line x1="560" y1="774" x2="800" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040" y1="774" x2="800" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<rect x="768.0" y="908" width="64" height="24" rx="3" fill="#4fb3e0" stroke="#1b4f6b"/>
+<rect x="775.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="784.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="793.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="802.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="811.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="820.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<text x="842" y="950" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Access-2</text>
+<text x="842" y="966" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Floor 2 · VLANs 21 / 22 / 23</text>
+<line x1="800" y1="932" x2="800" y2="1012" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="786" cy="1032" r="11" fill="#ddd"/>
+<circle cx="800" cy="1024" r="13" fill="#ddd"/>
+<circle cx="814" cy="1032" r="11" fill="#ddd"/>
+<rect x="776" y="1030" width="48" height="12" fill="#ddd"/>
+<text x="834" y="1034" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Cloud4</text>
+<text x="834" y="1050" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Floor 2 clients</text>
+<line x1="560" y1="774" x2="1300" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040" y1="774" x2="1300" y2="908" stroke="#ffffff" stroke-width="1.5"/>
+<rect x="1268.0" y="908" width="64" height="24" rx="3" fill="#4fb3e0" stroke="#1b4f6b"/>
+<rect x="1275.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="1284.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="1293.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="1302.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="1311.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<rect x="1320.0" y="916" width="6" height="8" fill="#1b4f6b"/>
+<text x="1258" y="950" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">Access-3</text>
+<text x="1258" y="966" font-size="12" text-anchor="end" fill="#b8c2c8" font-weight="normal">Floor 3 · VLANs 21 / 22 / 23</text>
+<line x1="1300" y1="932" x2="1300" y2="1012" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1286" cy="1032" r="11" fill="#ddd"/>
+<circle cx="1300" cy="1024" r="13" fill="#ddd"/>
+<circle cx="1314" cy="1032" r="11" fill="#ddd"/>
+<rect x="1276" y="1030" width="48" height="12" fill="#ddd"/>
+<text x="1266" y="1034" font-size="13" text-anchor="end" fill="#ffffff" font-weight="bold">Cloud5</text>
+<text x="1266" y="1050" font-size="12" text-anchor="end" fill="#b8c2c8" font-weight="normal">Floor 3 clients</text>
+<line x1="1450" y1="816" x2="1450" y2="1140" stroke="#ffffff" stroke-width="2"/>
+<line x1="300" y1="1062" x2="300" y2="1140" stroke="#ffffff" stroke-width="2"/>
+<line x1="800" y1="1062" x2="800" y2="1140" stroke="#ffffff" stroke-width="2"/>
+<line x1="1300" y1="1062" x2="1300" y2="1140" stroke="#ffffff" stroke-width="2"/>
+<rect x="150" y="1140" width="300" height="120" rx="6" fill="none" stroke="#5fd68a" stroke-width="1.5"/>
+<text x="300" y="1162" font-size="13" text-anchor="middle" fill="#5fd68a" font-weight="bold">vSwitch-Floor1</text>
+<text x="300" y="1180" font-size="12" text-anchor="middle" fill="#b8c2c8" font-weight="normal">own isolated vSwitch, no uplink</text>
+<rect x="183" y="1201" width="44" height="32" rx="2" fill="#4fb3e0"/>
+<rect x="188" y="1206" width="34" height="22" fill="#8fd3f2"/>
+<rect x="179" y="1237" width="52" height="8" rx="1" fill="#2f7fa8"/>
+<text x="245" y="1220" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Windows Client 1</text>
+<text x="245" y="1238" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Sales · VLAN 21</text>
+<rect x="650" y="1140" width="300" height="120" rx="6" fill="none" stroke="#5fd68a" stroke-width="1.5"/>
+<text x="800" y="1162" font-size="13" text-anchor="middle" fill="#5fd68a" font-weight="bold">vSwitch-Floor2</text>
+<text x="800" y="1180" font-size="12" text-anchor="middle" fill="#b8c2c8" font-weight="normal">own isolated vSwitch, no uplink</text>
+<rect x="683" y="1201" width="44" height="32" rx="2" fill="#4fb3e0"/>
+<rect x="688" y="1206" width="34" height="22" fill="#8fd3f2"/>
+<rect x="679" y="1237" width="52" height="8" rx="1" fill="#2f7fa8"/>
+<text x="745" y="1220" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">Windows Client 2</text>
+<text x="745" y="1238" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">IT · VLAN 22</text>
+<rect x="1150" y="1140" width="300" height="120" rx="6" fill="none" stroke="#5fd68a" stroke-width="1.5"/>
+<text x="1300" y="1162" font-size="13" text-anchor="middle" fill="#5fd68a" font-weight="bold">vSwitch-Floor3</text>
+<text x="1300" y="1180" font-size="12" text-anchor="middle" fill="#b8c2c8" font-weight="normal">own isolated vSwitch, no uplink</text>
+<rect x="1183" y="1201" width="44" height="32" rx="2" fill="#4fb3e0"/>
+<rect x="1188" y="1206" width="34" height="22" fill="#8fd3f2"/>
+<rect x="1179" y="1237" width="52" height="8" rx="1" fill="#2f7fa8"/>
+<text x="1245" y="1220" font-size="13" text-anchor="start" fill="#ffffff" font-weight="bold">(add a client later)</text>
+<text x="1245" y="1238" font-size="12" text-anchor="start" fill="#b8c2c8" font-weight="normal">Management · VLAN 23</text>
+<rect x="1475" y="1140" width="185" height="345" rx="6" fill="none" stroke="#4fb3e0" stroke-width="1.5"/>
+<text x="1567" y="1162" font-size="13" text-anchor="middle" fill="#4fb3e0" font-weight="bold">vSwitch-Lab</text>
+<text x="1567" y="1180" font-size="12" text-anchor="middle" fill="#b8c2c8" font-weight="normal">trunk PG · VLAN 4095</text>
+<text x="1487" y="1208" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">VLAN 10 · Servers</text>
+<rect x="1489" y="1217" width="9" height="9" rx="2" fill="#4fb3e0"/>
+<text x="1503" y="1226" font-size="12" text-anchor="start" fill="#ffffff" font-weight="bold">DC1</text>
+<text x="1503" y="1241" font-size="11" text-anchor="start" fill="#b8c2c8" font-weight="normal">10.0.10.254</text>
+<rect x="1489" y="1251" width="9" height="9" rx="2" fill="#4fb3e0"/>
+<text x="1503" y="1260" font-size="12" text-anchor="start" fill="#ffffff" font-weight="bold">DC2</text>
+<text x="1503" y="1275" font-size="11" text-anchor="start" fill="#b8c2c8" font-weight="normal">10.0.10.249</text>
+<rect x="1489" y="1285" width="9" height="9" rx="2" fill="#4fb3e0"/>
+<text x="1503" y="1294" font-size="12" text-anchor="start" fill="#ffffff" font-weight="bold">File/DHCP</text>
+<text x="1503" y="1309" font-size="11" text-anchor="start" fill="#b8c2c8" font-weight="normal">10.0.10.253</text>
+<text x="1487" y="1334" font-size="12" text-anchor="start" fill="#f5a524" font-weight="bold">VLAN 30 · DMZ</text>
+<rect x="1489" y="1343" width="9" height="9" rx="2" fill="#4fb3e0"/>
+<text x="1503" y="1352" font-size="12" text-anchor="start" fill="#ffffff" font-weight="bold">Ubuntu</text>
+<text x="1503" y="1367" font-size="11" text-anchor="start" fill="#b8c2c8" font-weight="normal">10.0.30.252</text>
+<text x="1487" y="1392" font-size="12" text-anchor="start" fill="#a78bfa" font-weight="bold">VLAN 99 · Mgmt</text>
+<rect x="1489" y="1401" width="9" height="9" rx="2" fill="#4fb3e0"/>
+<text x="1503" y="1410" font-size="12" text-anchor="start" fill="#ffffff" font-weight="bold">Jump box</text>
+<text x="1503" y="1425" font-size="11" text-anchor="start" fill="#b8c2c8" font-weight="normal">10.0.99.10</text>
+<rect x="60" y="1290" width="1395" height="195" rx="6" fill="none" stroke="#8a959b" stroke-width="1.5"/>
+<text x="78" y="1316" font-size="14" text-anchor="start" fill="#ffffff" font-weight="bold">Key points</text>
+<text x="78" y="1344" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">Departments = VLANs, not switches:</text>
+<text x="335" y="1344" font-size="12" text-anchor="start" fill="#ffffff" font-weight="normal">Sales 21 · IT 22 · Management 23 exist on every access switch, matching the AD OUs</text>
+<text x="78" y="1372" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">No single point of failure:</text>
+<text x="335" y="1372" font-size="12" text-anchor="start" fill="#ffffff" font-weight="normal">2 routers (VRRP/CARP), 2 core switches (LACP between them), dual uplinks from every access switch</text>
+<text x="78" y="1400" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">Gateways:</text>
+<text x="335" y="1400" font-size="12" text-anchor="start" fill="#ffffff" font-weight="normal">clients use the VRRP address .1 on the core switches; the cores send everything else to the routers' inside VIP 10.0.255.1</text>
+<text x="78" y="1428" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">ESXi lab vSwitches:</text>
+<text x="335" y="1428" font-size="12" text-anchor="start" fill="#ffffff" font-weight="normal">Promiscuous mode, MAC address changes, Forged transmits = Accept; each floor on its own vSwitch so floors don't merge outside EVE-NG</text>
+<text x="78" y="1456" font-size="12" text-anchor="start" fill="#4fb3e0" font-weight="bold">Stays outside EVE-NG:</text>
+<text x="335" y="1456" font-size="12" text-anchor="start" fill="#ffffff" font-weight="normal">ESXi management and the EVE-NG web UI (vSwitch0), and the VPN on the Raspberry Pi, so you never lock yourself out</text>
+</svg>
