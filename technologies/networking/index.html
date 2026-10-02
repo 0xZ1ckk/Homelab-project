@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://your-username.github.io/homelab/technologies/VPN/">
+        <link rel="canonical" href="https://your-username.github.io/homelab/technologies/networking/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>VPN - Omar Pasculli – Homelab docs</title>
+        <title>Networking - Omar Pasculli – Homelab docs</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VPN
+              Networking
             
           </span>
         </div>
@@ -253,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../esxi/" class="md-tabs__link">
+        <a href="../VPN.md" class="md-tabs__link">
           
   
   
@@ -483,6 +483,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../VPN.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../esxi/" class="md-nav__link">
         
   
@@ -575,12 +603,9 @@
   
 
 
-  <h1>VPN</h1>
+  <h1>Networking</h1>
 
-<p>The VPN server used is IPsec, it was set using the auto setup script from <a href="https://github.com/hwdsl2/setup-ipsec-vpn">this repo</a>. Not much to say here, the script sets everything up and outputs a digital certificate that is then used to generate a key and other certificates. These ones are used on client side to authenticate against the server. To make the VPN server accessible from the internet, i've enabled port forwarding on my home router.</p>
-<p>(add image here)</p>
-<p>All connections coming to UDP ports 500 and 4500 from the internet are forwarded to the VPN server.</p>
-<p>The VPN server is hosted on a Raspberry Pi host at the address 192.168.1.88, in the subnet containing my personal home devices. I will probably move it to a separate subnet. It used to be on a ubuntu VM on the ESXI host but i moved it so that i can reboot the server or change its network settings withtout losing connection and cutting myself out. </p>
+<p>Most of the networking side is emulated on a EVE-NG VM. It contains all of the routers and switches that make up the networking side of the lab. This decision was made because i wanted to use Cisco images and because i wanted to have control on layer 2 networking as well. In fact, in ESXi, the switching part is handled implicitly. The EVE-NG VM has several network adapters assigned to it that are used to connect it to the other VMs containing clients, servers and other types of hosts.</p>
 
 
 
